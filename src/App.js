@@ -1,11 +1,14 @@
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
+import './components/reset.css'
+import SignIn from "./components/SignIn/SignIn";
 
-    </div>
-  );
+function App() {
+    return (
+        <div className="App">
+            <SignIn/>
+        </div>
+    );
 }
 
 export default App;

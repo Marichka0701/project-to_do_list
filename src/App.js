@@ -4,16 +4,17 @@ import './components/reset.css'
 import SignInPage from "./pages/SignInPage/SignInPage";
 import SignUpPage from "./pages/SignUpPage/SignUpPage";
 import TodoListPage from "./pages/TodoListPage/TodoListPage";
-import AddTask from "./components/AddTask/AddTask";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
     return (
-        <div className="App">
-            {/*<SignInPage/>*/}
-            {/*<SignUpPage />*/}
-            <TodoListPage />
-            {/*<AddTask />*/}
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<SignInPage />}></Route>
+                <Route path="/sign-up" element={<SignUpPage />}></Route>
+                <Route path="/todo" element={<TodoListPage />}></Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
 

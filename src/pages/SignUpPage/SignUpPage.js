@@ -2,6 +2,7 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {signUpFormValidator} from "../../validators/SignUp.form.validator";
+import {Link} from "react-router-dom";
 
 import profileIcon from './images/profile-icon.png';
 import emailIcon from './images/email-icon.png';
@@ -83,9 +84,9 @@ const SignUpPage = () => {
                         </div>
                     </div>
                     <div>
-                        {/*<Link to="/">*/}
+                        <Link to="/">
                         <p className={styles.signIn}> Do you have an account? </p>
-                        {/*</Link>*/}
+                        </Link>
                     </div>
                     <button
                         disabled={!isValid}

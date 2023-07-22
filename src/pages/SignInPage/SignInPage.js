@@ -8,6 +8,7 @@ import profileIcon from './images/profile-icon.png';
 import passwordIcon from './images/password-icon.png';
 import '../../components/reset.css';
 import styles from './SignInPage.module.css';
+import {Link} from "react-router-dom";
 
 const SignInPage = () => {
     const {
@@ -67,13 +68,18 @@ const SignInPage = () => {
                         </div>
                     </div>
                     <div>
-                        <p className={styles.signUp}>Don`t have an account?</p>
+                        <Link to='/sign-up'>
+                            <p className={styles.signUp}>Don`t have an account?</p>
+                        </Link>
                     </div>
-                    <button
-                        disabled={!isValid}
-                        className={styles.button}
-                        type="submit"
-                    >Login</button>
+                    <Link to='/todo'>
+                        <button
+                            disabled={!isValid}
+                            className={styles.button}
+                            type="submit"
+                        >Login
+                        </button>
+                    </Link>
                 </form>
             </div>
         </div>

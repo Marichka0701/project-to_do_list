@@ -1,5 +1,6 @@
 import React from 'react';
 import {FiChevronRight} from "react-icons/fi";
+import {Link} from "react-router-dom";
 
 import TM from './images/tm-logo.jpg';
 import logout from './images/logout.png'
@@ -37,12 +38,12 @@ const Sidebar = ({props}) => {
                         Marichka Tanechnyk
                     </div>
                 </div>
-                {/*<Link to='/sign-up'>sign-up*/}
+                <Link to='/sign-up'>
                     <div className={styles.logoutContainer}>
                         <img src={logout} alt="Log out icon"/>
                         <button className={styles.logout}>Log out</button>
                     </div>
-                {/*</Link>*/}
+                </Link>
             </div>
 
         </>

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 
 import '../reset.css';
 import styles from './Tasks.module.css';
@@ -6,7 +6,7 @@ import {ContextTodo} from "../../pages/TodoListPage/TodoListPage";
 import Task from "./Task/Task";
 
 const Tasks = () => {
-    const [id, setId] = useState(0);
+    // const [id, setId] = useState(0);
 
     // const initialState = {
     //     // id: setId(id + 1),

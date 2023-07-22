@@ -1,0 +1,271 @@
+/* NEW */
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*font-family: 'Inconsolata', monospace;*/
+}
+
+.main-container .wrapper {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*gap: 40px;*/
+}
+
+
+.sidebar {
+    width: 250px;
+    /*height: 100%;*/
+    height: 100vh;
+    background: gainsboro;
+    padding: 20px 14px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*align-items: center;*/
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*position: relative;*/
+    transition: 1.5s;
+}
+
+/*.main-container .main-part {*/
+/*    margin-left: 250px;*/
+/*    transition: 1.5s;*/
+/*}*/
+
+/* close sidebar */
+
+.sidebar.close {
+    width: 75px;
+    transition: 1.5s;
+}
+
+.sidebar.close .chevronRight {
+    transform: rotate(0deg);
+    cursor: pointer;
+}
+
+.sidebar.close .userDetails {
+    gap: 40px;
+}
+
+.sidebar.close .userName {
+    opacity: 0;
+}
+
+.sidebar.close .logout {
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+}
+
+/*.main-container .main-part.close {*/
+/*    margin-left: 75px;*/
+/*    transition: 1.5s;*/
+/*}*/
+
+/* -------------------------------------------------- */
+
+
+.chevronRight {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: cornflowerblue;
+    cursor: pointer;
+    /*background: linear-gradient(to bottom right, rgba(191, 88, 127, 0.8436624649859944) 21%, rgba(98, 98, 255, 0.8240546218487395) 73%, rgba(47, 77, 173, 0.6251750700280112) 96%);*/
+    right: -15px;
+    top: 25px;
+    color: white;
+    border-radius: 50%;
+
+    transform: rotate(180deg);
+}
+
+/*.main-container .sidebar .user-photo {*/
+/*    display: inline;*/
+/*}*/
+.userDetails {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.userName {
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 1.5px;
+    color: rgba(65,65,65,0.84);
+}
+
+.userPhoto > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logoutContainer {
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    gap: 10px;
+}
+
+.logout {
+    background: transparent;
+    font-family: 'Inconsolata', monospace;
+    font-size: 16px;
+    color: rgba(65,65,65,0.84);
+    font-weight: bold;
+}
+
+/*.main-container .sidebar .user-name {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+
+/*    display: inline;*/
+/*}*/
+
+
+.main-container .main-part {
+    width: 100%;
+    /*height: 100%;*/
+    height: 100vh;
+    background-image: url("https://img.freepik.com/free-photo/steam-rises-as-coffee-cools-night-generated-by-ai_188544-10245.jpg?w=1060&t=st=1686653519~exp=1686654119~hmac=7b184194b2d60765908997254d002f210ff39210480753f2ea25c70187470a78");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 30px 50px;
+}
+
+.main-container .main-part .list-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*.main-container .main-part .task {*/
+/*    width: 100%;*/
+/*    height: 60px;*/
+/*    background: rgba(255, 255, 255, 0.71);*/
+/*    padding: 10px 40px;*/
+/*    border-radius: 10px;*/
+
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+
+/*    overflow: auto;*/
+
+/*    color: rgb(65, 65, 65);*/
+/*}*/
+
+/*.main-container .main-part .add-task {*/
+/*    width: 100%;*/
+/*    height: 60px;*/
+/*    !*background: rgba(222, 224, 255, 0.3);*!*/
+/*    background: rgba(255, 255, 255, 0.71);*/
+/*    padding: 10px 40px 10px 0;*/
+
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    !*gap: 20px;*!*/
+/*    border-radius: 10px;*/
+
+/*    font-family: 'Inconsolata', monospace;*/
+/*    font-weight: bold;*/
+/*    font-size: 20px;*/
+/*    color: rgb(65, 65, 65);*/
+
+/*    !*position: relative;*!*/
+
+/*}*/
+
+.main-container .main-part .add-task>div {
+    width: 60px;
+    height: 60px;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+
+.main-container .main-part .inner-text-task {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: rgb(65, 65, 65);
+    font-size: 20px;
+
+    padding: 0 10px;
+    /*overflow: auto;*/
+    /*white-space: pre-wrap;*/
+    /*word-break: break-all;*/
+    /*scrollbar-width: thin;*/
+    /*scrollbar-color: transparent transparent;*/
+}
+
+.main-container .main-part input:focus {
+    caret-color: rgb(65, 65, 65);
+
+}
+
+.main-container .main-part .inner-text-task::placeholder {
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(65, 65, 65);
+}
+
+.main-container .main-part .plus {
+    color: #282c34;
+    /*background: gray;*/
+    /*width: 40px;*/
+    /*height: 60px;*/
+    /*position: absolute;*/
+    /*top: 20px;*/
+    /*left: 0;*/
+    /*background: gray;*/
+    /*width: 40px;*/
+    /*height: 100%;*/
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*.btnAddTask {*/
+/*    width: 150px;*/
+/*    height: 100%;*/
+/*    border-radius: 10px;*/
+/*    background: gray;*/
+
+/*    font-size: 18px;*/
+/*    color: #282c34;*/
+/*    font-weight: 600;*/
+/*}*/

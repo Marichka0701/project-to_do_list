@@ -1,10 +1,10 @@
 import React, {useContext, useEffect} from 'react';
 import {useForm} from "react-hook-form";
-import {ContextTodo} from "../../pages/TodoListPage/TodoListPage";
 import {AiOutlinePlus} from "react-icons/ai";
 
 import '../reset.css';
 import styles from './AddTask.module.css';
+import {ContextTodo} from "../../pages/TodoListPage/TodoListPage";
 
 const AddTask = () => {
     const {
@@ -57,7 +57,7 @@ const AddTask = () => {
                        autoComplete='off'
                 />
                 <button
-                    className={styles.btnAddTask}
+                    className={styles.button}
                     type='submit'
                 > {isActive ? 'Edit' : 'Add task'}
                 </button>

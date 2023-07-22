@@ -25,6 +25,10 @@
     background: transparent;
 }
 
+.edit {
+    margin-left: 30px;
+}
+
 .editIcon, .closeIcon {
     width: 25px;
     height: 25px;

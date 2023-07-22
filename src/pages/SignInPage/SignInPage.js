@@ -2,13 +2,13 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {SignInFormValidator} from "../../validators/SignIn.form.validator";
+import {Link} from "react-router-dom";
 
 import user from './images/user-top.png';
 import profileIcon from './images/profile-icon.png';
 import passwordIcon from './images/password-icon.png';
 import '../../components/reset.css';
 import styles from './SignInPage.module.css';
-import {Link} from "react-router-dom";
 
 const SignInPage = () => {
     const {

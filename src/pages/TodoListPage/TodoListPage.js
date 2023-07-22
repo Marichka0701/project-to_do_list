@@ -1,7 +1,9 @@
 import React, {createContext, useState} from 'react';
+
 import AddTask from "../../components/AddTask/AddTask";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Tasks from "../../components/Tasks/Tasks";
+import '../../components/reset.css';
 import styles from './TodoListPage.module.css';
 
 export const ContextTodo = createContext([]);

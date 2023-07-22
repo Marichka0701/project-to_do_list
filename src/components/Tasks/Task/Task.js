@@ -23,7 +23,7 @@ const Task = ({task}) => {
         <div className={styles.task}>
             <p> {task} </p>
             <div className={styles.instruments}>
-                <button className={styles.button} onClick={handleEdit}>
+                <button className={`${styles.button}` `${styles.edit}` } onClick={handleEdit}>
                     <img className={styles.editIcon} src={editIcon} alt="edit icon"/>
                 </button>
                 <button className={styles.button} onClick={handleDelete}>

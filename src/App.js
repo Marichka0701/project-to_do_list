@@ -1,10 +1,10 @@
 import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import './components/reset.css'
 import SignInPage from "./pages/SignInPage/SignInPage";
 import SignUpPage from "./pages/SignUpPage/SignUpPage";
 import TodoListPage from "./pages/TodoListPage/TodoListPage";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
     return (

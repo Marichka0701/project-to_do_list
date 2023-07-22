@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 import profileIcon from './images/profile-icon.png';
 import emailIcon from './images/email-icon.png';
 import passwordIcon from './images/password-icon.png';
+import '../../components/reset.css';
 import styles from './SignUpPage.module.css';
 
 const SignUpPage = () => {

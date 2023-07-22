@@ -104,7 +104,7 @@
     gap: 30px;
 }
 
-input {
+.input {
     width: 90%;
     height: 30px;
     margin-left: 30px;
@@ -116,11 +116,11 @@ input {
     padding: 10px;
 }
 
-input:focus {
+.input:focus {
     caret-color: rgba(203, 203, 203, 0.68);
 }
 
-::placeholder,  input:focus {
+::placeholder,  .input:focus {
     color: rgba(203, 203, 203, 0.68);
 }
 
@@ -148,14 +148,9 @@ input:focus {
 }
 
 .error {
+    text-align: left;
     font-weight: 500;
     color: rgba(255, 0, 0, 0.81);
-}
-
-label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .signUp {

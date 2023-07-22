@@ -24,8 +24,6 @@ const TodoListPage = () => {
     const [editTask, setEditTask] = useState(null);
     const [isActive, setIsActive] = useState(false);
 
-    console.log(editTask)
-
     return (
         <div className={styles.mainContainer}>
             <div className={`${styles.wrapper} ${wrapperClosed ? `${styles.close}` : ''}`}>

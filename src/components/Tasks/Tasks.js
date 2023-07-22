@@ -21,16 +21,16 @@ const Tasks = () => {
 
 
     const { todos } = useContext(ContextTodo);
-
-    useEffect(() => {
-        console.log('render tasks ')
-    }, [todos])
+    //
+    // useEffect(() => {
+    //     console.log('render tasks ')
+    // }, [todos])
     // console.log(todos);
 
     return (
         <div className={styles.listTasks}>
             {
-                todos.map(task => <Task task={task}/>)
+                todos.map(task => <Task key={task} task={task}/>)
             }
         </div>
     );

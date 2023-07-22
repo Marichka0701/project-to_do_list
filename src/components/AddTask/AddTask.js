@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {useForm} from "react-hook-form";
 import {ContextTodo} from "../../pages/TodoListPage/TodoListPage";
 import {AiOutlinePlus} from "react-icons/ai";
@@ -16,34 +16,40 @@ const AddTask = () => {
     } = useForm();
 
     const {todos, setTodos, editTask, setEditTask, isActive, setIsActive} = useContext(ContextTodo);
-    const addTask = (data) => {
-        // console.log(data.taskDescription);
 
-        setTodos([...todos, data.task]);
-        // console.log(todos);
-        reset();
-        isActive && setIsActive(false);
-    }
-
-    const setDataIntoInput = (data) => {
-        let selectedTask = todos.at(todos.indexOf(editTask));
+    const edit = async (data) => {
+        const selectedTask = todos.at(todos.indexOf(editTask));
         setValue('task', selectedTask);
-        // console.log('edit', data);
-        // setTodos[...todos, selectedTask = data];
-        // let newTodos = todos.map(item => item);
-        // [...newTodos, selectedTask = data]
-        // setIsActive(false);
+        const newTodos = todos.map(item => item);
+        const index = newTodos.indexOf(editTask);
+        newTodos[index] = await data?.task;
+        setTodos(newTodos);
     }
-    isActive && setDataIntoInput();
+
+    const add = async (data) => {
+        setTodos([...todos, data.task]);
+    }
+    const save = async (data) => {
+        isActive ? edit(data) : add(data);
+        isActive && setIsActive(false);
+        reset();
+    }
+
+    const setDataIntoInput = async (data) => {
+        const selectedTask = todos.at(todos.indexOf(editTask));
+        setValue('task', selectedTask);
+    }
+
+    useEffect(() => {
+        isActive && setDataIntoInput();
+    }, [isActive])
 
     return (
         <div className={styles.addTask}>
             <div className={styles.plusContainer}>
                 <AiOutlinePlus className="plus"/>
             </div>
-            {/*<p> Add a Task </p>*/}
-            {/*handleSubmit(isActive ? `${setDataIntoInput}` : `${addTask}`)*/}
-            <form className={styles.form} onSubmit={isActive ? handleSubmit(setDataIntoInput) : handleSubmit(addTask)}>
+            <form className={styles.form} onSubmit={handleSubmit(save)}>
                 <input className={styles.inputTask}
                        {...register('task',
                            {required: true})}
@@ -52,6 +58,7 @@ const AddTask = () => {
                 />
                 <button
                     className={styles.btnAddTask}
+                    type='submit'
                 > {isActive ? 'Edit' : 'Add task'}
                 </button>
             </form>

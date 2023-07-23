@@ -6,6 +6,9 @@
     display: flex;
     align-items: center;
     border-radius: 10px;
+    opacity: 1;
+    transition: 1s;
+
     font-family: 'Inconsolata', monospace;
     font-weight: bold;
     font-size: 20px;
@@ -61,7 +64,17 @@
 /* responsive css */
 
 @media screen and (max-width: 425px) {
+    .addTask.close {
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .plusContainer {
+        display: none;
+    }
+
     .button {
         font-size: 16px;
     }
+
 }

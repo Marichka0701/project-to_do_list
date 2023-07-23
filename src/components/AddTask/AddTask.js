@@ -6,7 +6,7 @@ import '../reset.css';
 import styles from './AddTask.module.css';
 import {ContextTodo} from "../../pages/TodoListPage/TodoListPage";
 
-const AddTask = () => {
+const AddTask = ({mainPartClosed}) => {
     const {
         register,
         handleSubmit,
@@ -45,7 +45,7 @@ const AddTask = () => {
     }, [isActive])
 
     return (
-        <div className={styles.addTask}>
+        <div className={`${styles.addTask} ${!mainPartClosed ? `${styles.close}` : ''}`}>
             <div className={styles.plusContainer}>
                 <AiOutlinePlus className="plus"/>
             </div>

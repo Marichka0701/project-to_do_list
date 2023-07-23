@@ -33,7 +33,7 @@ const TodoListPage = () => {
                 <div className={`${styles.mainPart} ${mainPartClosed ? `${styles.close}` : ''}`}>
                     <ContextTodo.Provider value={{todos, setTodos, editTask,setEditTask, isActive, setIsActive}}>
                         <Tasks />
-                        <AddTask />
+                        <AddTask mainPartClosed={mainPartClosed} />
                     </ContextTodo.Provider>
                 </div>
             </div>
